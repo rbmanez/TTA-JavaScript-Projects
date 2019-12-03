@@ -1,6 +1,7 @@
 # TTA JavaScript
 Practice project from The Tech Academy's JavaScript course.
 
+## Pizza Project
 The Pizza Project is a pizza ordering menu that calculates the final price based on selections. I used CSS to implement a mobile first responsive design.
 
 #### Pizza Project Screenshot on Desktop (top of page)
