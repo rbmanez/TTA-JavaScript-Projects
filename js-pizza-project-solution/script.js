@@ -21,10 +21,7 @@ function order(){
     var saucePick = "";
     var cheesePick = "";
     var crustPick = "";
-
-
-
-
+    
     /*==========
     PIZZA SIZE
     ============
@@ -35,7 +32,6 @@ function order(){
     - " extra large, add $16 to total order...;*/
 
     //SOLUTION USING SWITCH:
-
     for(var i = 0; i < sizeArr.length; i++){
         if(sizeArr[i].checked){
             switch(sizeArr[i].value){
@@ -60,7 +56,6 @@ function order(){
     }
 
     //SOLUTION USING IF:
-
     /*if(sizeArr[0].checked){
         sizePicked = "Personal Pizza";
         totalSize = 6;
@@ -75,16 +70,12 @@ function order(){
         totalSize = 16;
     }*/
 
-
-
-
     /*==========
     MEAT TOPPING
     ============
     - if a meat is picked, add 1 to totalMeat 
     and push it to meatPick array
     - if totalMeat >= 1, subtract 1 (complimentary topping)*/
-
     for(var i = 0; i < meatArr.length; i++){
         if(meatArr[i].checked){
             totalMeat += 1;
@@ -110,13 +101,9 @@ function order(){
             }
         }
     }
-
     if(totalMeat >= 1){
         totalMeat -= 1;
     }
-
-
-
 
     /*==========
     VEGGIE TOPPING
@@ -126,7 +113,6 @@ function order(){
         - take its value, uppercase the first letter,
         push to veggiePick array
     - if total veggie topping >= 1, subtract 1 (complimentary topping)*/
-
     for(var i = 0; i < veggieArr.length; i++){
         if(veggieArr[i].checked){
             totalVeggie += 1;
@@ -134,13 +120,9 @@ function order(){
             veggiePick.push(capVeggie);
         }
     }
-
     if(totalVeggie >= 1){
         totalVeggie -= 1;
     }
-
-
-
 
     /*==========
     SAUCE
@@ -148,7 +130,6 @@ function order(){
     - if a sauce is picked, assign it to saucePick*/
 
     //SOLUTION USING IF:
-
     if(sauceArr[0].checked){
         saucePick = "Marinera Sauce";
     } else if(sauceArr[1].checked){
@@ -160,7 +141,6 @@ function order(){
     }
 
     //SOLUTION USING SWITCH:
-
     /*for(var i = 0; i < sauceArr.length; i++){
         if(sauceArr[i].checked){
             switch(sauceArr[i].value){
@@ -180,15 +160,11 @@ function order(){
         }
     }*/
 
-
-
-
     /*==========
     EXTRA CHEESE
     ============
     - if a cheese is picked, assign it to cheesePick
     - if cheese picked == "extraCheese", totalCheese = 3*/
-
     for(var i = 0; i < cheeseArr.length; i++){
         if(cheeseArr[i].checked){
             if(cheeseArr[i].value == "regular"){
@@ -202,15 +178,11 @@ function order(){
         } 
     }
 
-
-
-
     /*==========
     CHEESE STUFFED CRUST
     ============
     - if a crust is picked, assign it to crustPick
     - if crust picked == "cheeseStuffedCrust", totalCrust = 3*/
-
     for(var i = 0; i < crustArr.length; i++){
         if(crustArr[i].checked){
             switch(crustArr[i].value){
@@ -234,19 +206,12 @@ function order(){
         }
     }
 
-
-
-
     /*==========
     TOTAL ORDER
     ============
     - add everything to get total order*/
-
     totalOrder = totalSize + totalMeat + totalVeggie + totalCheese
         + totalCrust;
-
-
-
 
     /*==========
     RECEIPT TABLE
@@ -275,7 +240,7 @@ function order(){
    if(tableCheck){
        tableCheck.remove();
    }
-    
+
    // - create table element
    var table = document.createElement("table");
    // - create id for table element
@@ -363,19 +328,3 @@ function order(){
     var totalPriceCellText = document.createTextNode("$" + totalOrder);
     totalPriceCell.appendChild(totalPriceCellText);
 }
-
-
-
-
-/*==========
-NOTES
-============
-- dom selectors: class (array), id (first instance), tag name (array)
-- select, then manipulate
-- google:
-    - javascript add dom element
-    - javascript add node to dom
-    - javascript add table
-
-TO DO:
-- */
