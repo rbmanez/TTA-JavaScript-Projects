@@ -1,4 +1,4 @@
-# TTA JavaScript Projects
+# TTA JavaScript Project
 Practice project from The Tech Academy's JavaScript course.
 
 ## Pizza Project
