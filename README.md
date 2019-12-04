@@ -1,7 +1,7 @@
 # TTA JavaScript Project
 
-## Pizza Ordering Menu Project
-The Pizza Ordering Menu Project is a JavaScript project that calculates the final pizza price based on selections. I used pure CSS to implement a mobile first responsive design.
+## Pizza Ordering Menu
+This is a JavaScript project that calculates the final pizza price based on selections. I used pure CSS to implement a mobile first responsive design.
 
 [Click here to see the code.](https://github.com/rbmanez/TTA-JavaScript-Projects/tree/master/js-pizza-project-solution)
 
